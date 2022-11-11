@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Change src value of iframe dynamically</title>
+    <script type="text/javascript">
+     function newSrc() {
+      var e = document.getElementById("myInput");
+      var newSrc = e.value;
+      document.getElementById("MyFrame").src=newSrc;
+     }
+    </script>
+    <style type="text/css">
+      select {clear:both;}
+    </style>
+  </head>
+
+  <body>
+    <iframe src="https://beamtic.com/Examples/ip.php" style="width:450px;height:450px;overflow:scroll;" id="MyFrame"></iframe>
+	<input type="text" value="Blabla" id="myInput">
+    <button onClick="newSrc();">Change Iframe Src</button>
+
+  </body>
+
+</html>

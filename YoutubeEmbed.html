@@ -1,18 +1,53 @@
 <html>
 <head> 
   <title>YoutubeOVERRIDE🖖</title>
+  <script type="text/javascript">
+     function VidChange() {
+      let e = document.getElementById("myInput").value;
+	  let f = e.toString()
+      let splitted = f.slice(32, 43)
+	  var def = "https://www.youtube.com/embed/"
+	  var newSrc = def.concat(splitted)
+      document.getElementById("MyFrame").src=newSrc;
+     }
+	 function ListChange() {
+      let e = document.getElementById("myInput").value;
+	  let f = e.toString()
+      let splitted = f.slice(32)
+	  var def = "https://www.youtube.com/embed/videoseries"
+	  var newSrc = def.concat(splitted)
+      document.getElementById("MyFrame").src=newSrc;
+     }
+	 
+    </script>
   <link rel="icon" type="image/x-icon" href="files/youtube.ico">
 <style>
 body {
   background-color: black;
   height: 100%;
 }
+input{
+height:100px;
+width:1000px;
+font-size:30;
+}
+button {
+	width: 400px;
+	height: 100px;
+	font-size: 40;
+}
 </style>
 </head>
 <body>
-    <iframe width="99%" height="98%" 
-    src="https://www.youtube.com/embed/GCHHzw4s5W4"
+    <iframe id="MyFrame" width="99%" height="98%"
+   	src="https://www.youtube.com/playlist?list=PL1orhGztKx5DjDzlQj0bbf2Dlil7SRl-6"
      title="YouTube video player"
      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
      </iframe>
+	 	<input type="text" value="" id="myInput">
+    <button onClick="VidChange();"> Change Vid</button>
+    <button onClick="ListChange();"> Change Playlist</button>
+	
+
  </body>
+ 
