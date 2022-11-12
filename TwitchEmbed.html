@@ -5,8 +5,12 @@
   <script type="text/javascript">
      function StreamChange() {
       let e = document.getElementById("myInput").value;
-	  var newSrc = e;
-      document.getElementById("twitch-embed").channel =newSrc;
+	  let f = e.toString()
+      const splitted = f.split("=")
+	  const split2 = splitted[1].split("&")
+	  var almost = splitted[0].concat(f)
+	  var newSrc = almost.concat(split2[1]
+      document.getElementsByTagName("iframe")[0].src=newSrc;
      }
     </script>
   <link rel="icon" type="image/x-icon" href="files/twitchico.ico">
