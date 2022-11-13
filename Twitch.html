@@ -14,15 +14,16 @@ input{
 color:white;
 background-color:black;
 height:100px;
-width:45%;
+width:60%;
 font-size:50;
 }
 button {
 color:white;
-background-color:gray;
-	width: 45%;
+background-color:black;
+border-color:white;
+	width: 30%;
 	height: 100px;
-	font-size: 50;
+	font-size: 35;
 }
 </style>
 </head>
@@ -54,7 +55,7 @@ background-color:gray;
       });
 	  function StreamChange() {
       let Input = document.getElementById("myInput").value;
-	  let inputString = Input.toString()
+	  let inputString = Input.toString().replace(/\s/g, '')
 	  let origURL = document.getElementsByTagName("iframe")[0].src;
       const [URL1, ...URLRest] = origURL.split("=")
 	  console.log(URL1)
@@ -67,7 +68,9 @@ background-color:gray;
       document.getElementsByTagName("iframe")[0].src=newSrc;
      }
     </script>
-	<input type="text" value="" id="myInput">
+	<p>
+	 </p>
+	<input type="text"onfocus="this.value=''"  value="" id="myInput">
     <button onClick="StreamChange();"> Change Streamer</button>
 	<p><br>
 	the_phantom_sword_phantom <br>

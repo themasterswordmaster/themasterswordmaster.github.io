@@ -36,10 +36,11 @@ font-size:50;
 }
 button {
 color:white;
-background-color:gray;
+background-color:black;
+border-color:white;
 	width: 30%;
 	height: 100px;
-	font-size: 50;
+	font-size: 35;
 }
 </style>
 </head>
@@ -49,8 +50,11 @@ background-color:gray;
      title="YouTube video player"
      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
      </iframe>
-	 	<input type="text" value="" id="myInput">
-    <button onClick="VidChange();"> Change Vid</button>|
+	 <p>
+	 <br/>
+	 </p>
+	 	<input type="text" onfocus="this.value=''" value="" id="myInput">
+    <button onClick="VidChange();"> Change Vid</button>
     <button onClick="ListChange();"> Change Playlist</button>
 	
 
