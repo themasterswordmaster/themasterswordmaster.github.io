@@ -37,27 +37,22 @@ border-color:white;
   var options = {
     width: "100%",
     height: "100%",
-    video: "<video ID>",
+    video: "1656663377",
         parent: ["themasterswordmaster.github.io"]
   };
   var player = new Twitch.Player("twitch-embed", options);
   player.setVolume(0.5);
-  //https://player.twitch.tv?height
-  //=100%25&parent
-  //=themasterswordmaster.github.io&referrer=file%3A%2F%2F%2FP%3A%2F%3D%2FOverrideCast%2Fthemasterswordmaster.github.io%2FTwitchVOD.html&video
-  //=1656663377&width
-  //=100%25
 	  function StreamChange() {
       let Input = document.getElementById("myInput").value;
 	  let inputString = Input.toString().replace(/\s/g, '')
 	  let origURL = document.getElementsByTagName("iframe")[0].src;
-      const [URLPiece1,URLPiece2,URLPiece3,URLTOSS,URLPiece5] = origURL.split("=")
-	  const URLPieces = [URLPiece1,URLPiece2,URLPiece3];
+      const [URLPiece1,URLPiece2,URLPiece3,URLPiece4, URLTOSS,URLPiece6] = origURL.split("=")
+	  const URLPieces = [URLPiece1,URLPiece2,URLPiece3,URLPiece4];
 	  let URLPart1 = URLPieces.join("=")
 	  const [trash, ...URLFinal] = URLTOSS.split("&")
-	  const URLEnding = [URLFinal,URLPiece5];
+	  const URLEnding = [URLFinal,URLPiece6];
 	  let URLDeets = URLFinal.join("=") 
-	  let newSrc = URL1 + '=' + inputString + '&' + URLDeets
+	  let newSrc = URLPart1 + '=' + inputString + '&' + URLDeets
 	  
       document.getElementsByTagName("iframe")[0].src=newSrc;
 	  }
