@@ -32,25 +32,32 @@ border-color:white;
     <div id="twitch-embed" style="width:100%, height:100%"></div>
 
 	<script src= "https://player.twitch.tv/js/embed/v1.js"></script>
-<div id="<player div ID>"></div>
 <script type="text/javascript">
-  var options = {
-    width: "100%",
-    height: "100%",
-    video: "1656663377",
+      new Twitch.Embed("twitch-embed", {
+        width: "100%",
+        height: "100%",
+        muted: false,
+		video: "1656663377",
+        // the_phantom_sword_phantom 
+        // lunarkocho
+        // caialive
+        // melody1v 
+        // jabroni_mike  
+        // vinesauce 
+        // vargskelethor
+        //
+        
         parent: ["themasterswordmaster.github.io"]
-  };
-  var player = new Twitch.Player("twitch-embed", options);
-  player.setVolume(0.5);
+      });
 	  function StreamChange() {
       let Input = document.getElementById("myInput").value;
 	  let inputString = Input.toString().replace(/\s/g, '')
 	  let origURL = document.getElementsByTagName("iframe")[0].src;
-      const [URLPiece1,URLPiece2,URLPiece3,URLPiece4, URLTOSS,URLPiece6] = origURL.split("=")
-	  const URLPieces = [URLPiece1,URLPiece2,URLPiece3,URLPiece4];
+      const [URLPiece1,URLPiece2,URLPiece3,URLPiece4,URLPiece5, URLTOSS,URLPiece7] = origURL.split("=")
+	  const URLPieces = [URLPiece1,URLPiece2,URLPiece3,URLPiece4,URLPiece5];
 	  let URLPart1 = URLPieces.join("=")
 	  const [trash, ...URLFinal] = URLTOSS.split("&")
-	  const URLEnding = [URLFinal,URLPiece6];
+	  const URLEnding = [URLFinal,URLPiece7];
 	  let URLDeets = URLEnding.join("=") 
 	  let newSrc = URLPart1 + '=' + inputString + '&' + URLDeets
 	  
