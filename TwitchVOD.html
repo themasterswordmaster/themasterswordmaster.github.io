@@ -51,7 +51,7 @@ border-color:white;
 	  let URLPart1 = URLPieces.join("=")
 	  const [trash, ...URLFinal] = URLTOSS.split("&")
 	  const URLEnding = [URLFinal,URLPiece6];
-	  let URLDeets = URLFinal.join("=") 
+	  let URLDeets = URLEnding.join("=") 
 	  let newSrc = URLPart1 + '=' + inputString + '&' + URLDeets
 	  
       document.getElementsByTagName("iframe")[0].src=newSrc;
