@@ -20,6 +20,15 @@
      }
 	 
     </script>
+ <script type="text/javascript">
+
+    function ChangeURL(newURL){
+		let splitted = newURL.slice(32)
+		var def = "https://www.youtube.com/embed/videoseries"
+		var newSrc = def.concat(splitted)
+		document.getElementById("MyFrame").src=newSrc;
+    }
+    </script>
   <link rel="icon" type="image/x-icon" href="files/youtube.ico">
 <style>
 body {
@@ -59,8 +68,20 @@ font-size:35;
 	 	<input type="text" onfocus="this.value=''" value="" id="myInput">
     <button onClick="VidChange();"> Change Vid</button>
     <button onClick="ListChange();"> Change Playlist</button>
+	<hr class="dashed"><hr class="dashed"><hr class="dashed">
+	<button onClick="ChangeURL('https://www.youtube.com/playlist?list=PL1orhGztKx5D5IyRcov-t6UcZrli_jIFr');"> Snob (Part 1) </button>
+	<button onClick="ChangeURL('https://www.youtube.com/playlist?list=PL1orhGztKx5DjVwgALd18nnPiFpQ8jKka');"> Snob (Part 2) </button>
+	<button onClick="ChangeURL('https://www.youtube.com/playlist?list=PL1orhGztKx5DlTnV513QXL708LBnLYtOv');"> Snob (Part 3) </button>
+	<button onClick="ChangeURL('https://www.youtube.com/playlist?list=PL1orhGztKx5A4z8CICX4VxzszK4V_8iwl');"> Snob (Part 4) </button>
+	<button onClick="ChangeURL('https://www.youtube.com/playlist?list=PL1orhGztKx5DUXn6fpvY1rxqJz1cpSH7J');"> Snob (Part 5) </button>
+	<button onClick="ChangeURL('None');"> -Snob (Part 6)- </button>
+	<button onClick="ChangeURL('https://www.youtube.com/playlist?list=PL1orhGztKx5ATf9CDofCVQO_6S6ef5AAK');"> Streams </button>
+	<button onClick="ChangeURL('https://www.youtube.com/playlist?list=PLhMoQ2ilJfUvwmreAbpRnWVT4R9vp0H59');"> Three Stooges</button>
+	<button onClick="ChangeURL('https://www.youtube.com/playlist?list=PL1orhGztKx5CLccPcalvTZR34DyNUg4Dt');"> Phelous (Part 1) </button>
+	<button onClick="ChangeURL('https://www.youtube.com/playlist?list=PL1orhGztKx5AdoGqQvVc8AMpcBOsRBCB9');"> Phelous (Part 2) </button>
 	<p></p>
 	<a href="https://www.youtube.com/feed/library"> Youtube Library </a>
+	
 	
 
  </body>
