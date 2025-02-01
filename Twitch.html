@@ -67,12 +67,33 @@ border-color:white;
 	  
       document.getElementsByTagName("iframe")[0].src=newSrc;
      }
+	 function ChangeURL(new)
+	 {
+	       let Input = new;
+	  let inputString = Input.toString().replace(/\s/g, '')
+	  let origURL = document.getElementsByTagName("iframe")[0].src;
+      const [URL1, ...URLRest] = origURL.split("=")
+	  console.log(URL1)
+	  console.log(URLRest)
+	  let URLPart2 = URLRest.join("=")
+	  const [trash, ...URLFinal] = URLPart2.split("&")
+	  let URLDeets = URLFinal.join("&") 
+	  let newSrc = URL1 + '=' + inputString + '&' + URLDeets
+	  
+      document.getElementsByTagName("iframe")[0].src=newSrc;
+	 }
     </script>
 	<p>
 	 </p>
 	<input type="text"onfocus="this.value=''"  value="" id="myInput">
     <button onClick="StreamChange();"> Change Streamer</button>
+	<hr class="dashed"><hr class="dashed"><hr class="dashed">
 	<p><br>
+	<button onClick="ChangeURL('Vinesauce');"> Vinesauce </button>
+	<button onClick="ChangeURL('vargskelethor');"> Vargskelethor </button>
+	<button onClick="ChangeURL('themasterswordmaster');"> themasterswordmaster </button>
+	<button onClick="ChangeURL('lunarkocho');"> lunarkocho </button>
+	<button onClick="ChangeURL('RevScarecrow');"> RevScarecrow </button>
     melodyiv <br>
 	the_phantom_sword_phantom <br>
     lunarkocho<br>
