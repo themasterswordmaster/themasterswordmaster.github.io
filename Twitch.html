@@ -29,7 +29,7 @@ border-color:white;
 </head>
 <body>
     <!-- Add a placeholder for the Twitch embed -->
-    <div id="twitch-embed" style="width:100%, height:100%">sharts</div>
+    <div id="twitch-embed" style="width:100%, height:100%">farting rn</div>
 
     <!-- Load the Twitch embed JavaScript file -->
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
@@ -59,7 +59,21 @@ border-color:white;
 	  
       document.getElementsByTagName("iframe")[0].src=newSrc;
      }
-	
+	 function ChangeURL(thingy)
+	 {
+	       let Input = thingy;
+	  let inputString = Input.toString().replace(/\s/g, '')
+	  let origURL = document.getElementsByTagName("iframe")[0].src;
+      const [URL1, ...URLRest] = origURL.split("=")
+	  console.log(URL1)
+	  console.log(URLRest)
+	  let URLPart2 = URLRest.join("=")
+	  const [trash, ...URLFinal] = URLPart2.split("&")
+	  let URLDeets = URLFinal.join("&") 
+	  let newSrc = URL1 + '=' + inputString + '&' + URLDeets
+	  
+      document.getElementsByTagName("iframe")[0].src=newSrc;
+	 }
     </script>
 	<p>
 	 </p>
