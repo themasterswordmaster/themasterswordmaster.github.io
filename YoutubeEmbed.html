@@ -18,13 +18,15 @@
 	  var newSrc = def.concat(splitted)
       document.getElementById("MyFrame").src=newSrc;
      }
-	 
-    </script>
- <script type="text/javascript">
-
     function ChangeURL(newURL){
 		let splitted = newURL.slice(32)
 		var def = "https://www.youtube.com/embed/videoseries"
+		var newSrc = def.concat(splitted)
+		document.getElementById("MyFrame").src=newSrc;
+    }
+	    function ChangeURLVid(newURL){
+		let splitted = newURL.slice(32)
+		var def = "https://www.youtube.com/embed/"
 		var newSrc = def.concat(splitted)
 		document.getElementById("MyFrame").src=newSrc;
     }
@@ -83,10 +85,12 @@ font-size:35;
 	<button onClick="ChangeURL('https://www.youtube.com/playlist?list=PLR_4pTc1KGS4EV7iPuBC9jqImz74XNBVZ');"> Joel - Shareware </button>
 	<button onClick="ChangeURL('https://www.youtube.com/playlist?list=PL1orhGztKx5COPFtw4IM1Aq2uuxR5MZ8s');"> AVGN - Part 1 </button>
 	<button onClick="ChangeURL('https://www.youtube.com/playlist?list=PL1orhGztKx5CQNthopw7evbqUyKahCPla');"> AVGN - Part 2 </button>
-	<button onClick="ChangeURL('https://www.youtube.com/playlist?list=PL1orhGztKx5BGhmT_94SLnR5YhhqdSd-6');"> Personal Watch </button>	
+	<button onClick="ChangeURLVid('https://www.youtube.com/playlist?list=PL1orhGztKx5BGhmT_94SLnR5YhhqdSd-6');"> Personal Watch </button>	
 	<button onClick="ChangeURL('https://www.youtube.com/watch?v=YUASl28XOh0');"> AI Sponge </button>
 	<p></p>
 	<a href="https://www.youtube.com/feed/library"> Youtube Library </a>
+	<a href="https://www.youtube.com/@AISponge3"> AI Sponge Channel </a>
+	
 	
 	
 
