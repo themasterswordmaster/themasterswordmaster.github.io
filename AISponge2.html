@@ -28,17 +28,33 @@ border-color:white;
 }
 </style>
 </head>
-<body>
+<body onload='updateLiveChat()'>
 
 
 <div class="ytContainer ytContainerChat" width="100%" style="display=inline-block">
-<iframe id="MyFrame" width="75%" height="98%"
+<iframe id="liveStream" width="75%" height="98%"
    	src="https://www.youtube.com/embed/9fznZGfuFLk"
      title="YouTube video player"
      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
      </iframe>  
     <!-- YouTube Live Chat -->
-    <iframe  style="flex: 1 1 auto;min-width: 0; max-width:24% "height="98%" src="https://www.youtube.com/live_chat?v=9fznZGfuFLk&embed_domain=themasterswordmaster.github.io" ></iframe>
+    <iframe  id="liveChat" style="flex: 3 3 3;min-width: 0; max-width:24% "height="98%" src="www.youareanidiot.com" ></iframe>
 </div>
   </body>
+  <script>
+    function updateLiveChat() {
+      const liveStreamUrl = document.querySelector('#liveStream').src;
+      const videoId = liveStreamUrl.split('channel=')[1]; // Extract video ID or channel ID
+      const chatUrl =
+        'https://www.youtube.com/live_chat?v=' +
+        videoId +
+        '&embed_domain=' +
+        'themasterswordmaster.github.io';
+      document.getElementById('liveChat').src = chatUrl; // Update chat iframe
+    }
+
+    // Call it when the page loads
+    window.onload = updateLiveChat();
+  </script>
+</script>
 </html>
